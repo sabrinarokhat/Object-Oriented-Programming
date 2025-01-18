@@ -1,15 +1,27 @@
 #include <iostream>
 
-using namespace std;
+namespace space {
+    void greet() {
+        std::cout << "Hello World!\n";
+    }
 
-int main() {
-    int a, b;
-    
-    cin>>a>>b;
-
-    cout<<a +b;
-    
-    return 0;
+    void multiplication(int a, int b) {
+        std::cout << a * b << "\n";
+    }
 }
 
-//  /Users/user/Documents/Project c++/untitled folder/draft.cpp 
+int main() {
+    space::greet();
+
+    int a;
+    int b;
+
+    std::cout << "Enter first number: ";
+    std::cin >> a;
+    std::cout << "Enter second number: ";
+    std::cin >> b;
+
+    space::multiplication(a, b);
+
+    return 0;
+}
